@@ -5,11 +5,7 @@ class Roles < Application
   def index
     provides :json
     @role = Role.new
-    if content_type == :json
-      display @roles
-    else
-      render
-    end
+    display @roles
   end
 
   def create
